@@ -30,3 +30,11 @@ The _srand()_ and _rand()_ function as pseudorandom. The randomness is limited t
 ***
 
 ## **Task 2 Description** 
+
+Imagine a server with the following specs:
+● 4 times Intel(R) Xeon(R) CPU E7-4830 v4 @ 2.00GHz
+● 64GB of ram
+● 2 tb HDD disk space
+● 2 x 10Gbit/s nics
+The server is used for SSL offloading and proxies around 25000 requests per second.
+Which metrics are interesting to monitor in that specific case and how would I do that? What are the challenges of monitoring this?
