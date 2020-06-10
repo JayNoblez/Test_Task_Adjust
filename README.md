@@ -22,7 +22,6 @@ Your Output should look like
 1
 9
 3
-
 ```
 
 3. **Known limitation**:
