@@ -12,6 +12,16 @@ You can tweak the script to run bigger ranges by increasing the _"loop"_ and _"r
 
 Your Output should look like 
 ``` 
+4
+10
+2
+7
+8
+6
+5
+1
+9
+3
 
 ```
 
