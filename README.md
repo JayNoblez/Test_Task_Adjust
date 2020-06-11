@@ -38,5 +38,6 @@ Imagine a server with the following specs:
 * 2 tb HDD disk space
 * 2 x 10Gbit/s nics
 
+![Image](https://github.com/JayNoblez/Test_Task_Adjust/blob/master/Adjust.png)
 The server is used for SSL offloading and proxies around 25000 requests per second.
 Which metrics are interesting to monitor in that specific case and how would I do that? What are the challenges of monitoring this?
