@@ -52,7 +52,7 @@ The SSL offloading process takes the burden of having to run expensive computati
 
 All traffic requests are channelled through the SSL offloading server, it is therefore important to monitor metrics relating to the health of this server. To protect availability when trying to reach the backend webservers/ applications.
 
-Relevant metrics to monitor at the SSL Offloading Server can include: 
+### Relevant metrics to monitor at the SSL Offloading Server can include: 
 
 1. **Offloading round-trip Latency:** monitors how long each request-response cycle is. It is measured in **Percentiles**.
 
@@ -70,5 +70,13 @@ This metrics indicates how well the SSL offloading server is servicing incoming 
 5. **Memory Utilization in %**
 6. **Number of Active threads per core**
 7. **Backend server/host health**
+
+### How to measure
+1. Async threads in server on the request path export metrics after request is served
+2. Buffer metrics to improve metric collection performance
+3. Possibly offload metric aggregation and computations to a different machine.
+
+### Challenges
+Monitoring comes with its own compute costs and memory overhead
 
 
