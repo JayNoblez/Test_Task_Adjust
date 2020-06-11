@@ -54,9 +54,7 @@ All traffic requests are channelled through the SSL offloading server, it is the
 
 Relevant metrics to monitor at the SSL Offloading Server can include: 
 
-1. **Offloading round-trip Latency:** monitors how long each request-response cycle is.
-
-It is measured in **Percentiles**.
+1. **Offloading round-trip Latency:** monitors how long each request-response cycle is. It is measured in **Percentiles**.
 
 *For example*, we can say **50th percentile** of all the requests have a response time less than x milliseconds, **95th Percentile** is less than x+eps milliseconds and **99th percentile** is less than x+y+eps milliseconds. 
 
