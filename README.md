@@ -62,13 +62,13 @@ As there is no right number for laency, this would depend on the expected backen
 
 Latency values could also vary depending on the size of the negotiated requests, caching for abbreviated SSL handshakes, cipher suite selection e.g RSA based cipher vs ECC based cipher, size of the certificate chain etc.
 
-2. **The ratio of successful connections vs total connection requests**. 
-Or Error/total requests. This metrics indicates how well the SSL offloading server is servicing incoming requests. Connection drops might be a good indicator of servers maxxing at overcapacity or a Denial of Service attack when failed handshaking requests within a short period are astronomically larger than the baseline. It might also be a good marker to check the number of HTTP status error codes like 5xx usually when migrating to a new change.
+2. **The ratio of successful connections vs total connection requests** : or error/total requests. 
+This metrics indicates how well the SSL offloading server is servicing incoming requests. Connection drops might be a good indicator of servers maxxing at overcapacity or a Denial of Service attack when failed handshaking requests within a short period are astronomically larger than the baseline. It might also be a good marker to check the number of HTTP status error codes like 5xx usually when migrating to a new change.
  
-3. Number of active connections
-4. CPU Utilization in %
-5. Memory Utilization in %
-6. Number of Active threads per core
-7. Backend server/host health
+3. **Number of active connections**
+4. **CPU Utilization in %**
+5. **Memory Utilization in %**
+6. **Number of Active threads per core**
+7. **Backend server/host health**
 
 
