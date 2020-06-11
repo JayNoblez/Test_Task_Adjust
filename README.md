@@ -52,7 +52,7 @@ The SSL offloading process takes the burden of having to run expensive computati
 
 All traffic requests are channelled through the SSL offloading server, it is therefore important to monitor metrics relating to the health of this server. To protect availability when trying to reach the backend webservers/ applications.
 
-Relevant metrics to monitor at the SSL Offloading Server can include some usability impacting metrics like Latency, Number of HTTP status error codes like 5xx. 
+Relevant metrics to monitor at the SSL Offloading Server can include: 
 
 1. **Offloading round-trip Latency:** monitors how long each request-response cycle is.
 
@@ -65,11 +65,12 @@ As there is no right number for laency, this would depend on the expected backen
 Latency values could also vary depending on the size of the negotiated requests, caching for abbreviated SSL handshakes, cipher suite selection e.g RSA based cipher vs ECC based cipher, size of the certificate chain etc.
 
 2. **The ratio of successful connections vs total connection requests**. 
-Or Error/total requests. This metrics indicates how well the SSL offloading server is servicing incoming request.Connection drops might be a good indicator of servers maxxing at overcapacity or a Denial of Service attack when failed handshaking requests within a short period are astronomically larger than the baseline.
+Or Error/total requests. This metrics indicates how well the SSL offloading server is servicing incoming requests. Connection drops might be a good indicator of servers maxxing at overcapacity or a Denial of Service attack when failed handshaking requests within a short period are astronomically larger than the baseline. It might also be a good marker to check the number of HTTP status error codes like 5xx usually when migrating to a new change.
  
-3. Active connections
-4. CPU Utilization
-5. Memory Utilization
+3. Number of active connections
+4. CPU Utilization in %
+5. Memory Utilization in %
 6. Number of Active threads per core
 7. Backend server/host health
+
 
