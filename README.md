@@ -2,7 +2,7 @@
 
 ## **Task 1 Description**  
 
-This script that writes the numbers from 1 - 10 in random order.  Each number should appear only once.
+This script writes the numbers from 1 - 10 in random order.  Each number should appear only once.
 You can tweak the script to run bigger ranges by increasing the _"loop"_ and _"range"_ variables values in the script.
 
 1. **Build instruction**: Clone the repo, and make the file *"random_ten.sh"* executable. 
