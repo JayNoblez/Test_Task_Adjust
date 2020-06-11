@@ -44,4 +44,25 @@ requests per second.
 * What are the challenges of monitoring
 this?
 
+
 ![Image](https://github.com/JayNoblez/Test_Task_Adjust/blob/master/Adjust.png)
+
+### Solution 
+The SSL offloading process takes off the burden of having to run expensive computation like decryption and encryption on backend systems.
+
+Since all traffic/ requests are channelled through the SSL offloading server, it is important to keep an eye on metrics relating the health of this server. 
+
+This is because it poses a single point of failure when trying to reach the backend webservers/ applications.
+For initiated client requests to reach the backend apps, the server needs to be highly available such that it can service all incoming requests.
+
+Metrics of Concern at the SSL Offloading Server: 
+Can either be some Usability impacting metrics like Latency, Error Codes. 
+
+1. Offloading round-trip Latency: How long is each request-response cycle. Measured in Percentiles. For example, we can say 50th percentile of all the requests have a response time less than x milliseconds, 95th is less than x+eps milliseconds and 99th is less than x+y+eps milliseconds.
+Since there is no right number for Latency, this would depend on the expected backend application run time. In any case, latency values should reasonably fall within typical SLA values.
+Long response times indicates failures.
+
+2. The ratio of successful connections vs total connection requests. or Error/total requests.
+This metrics indicates how well the SSL offloading server is servicing incoming requests. Depending on the NICs, 
+
+3. How many active connection  
