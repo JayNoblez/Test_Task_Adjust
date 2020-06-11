@@ -54,7 +54,13 @@ All traffic requests are channelled through the SSL offloading server, it is the
 
 Relevant metrics to monitor at the SSL Offloading Server can include some usability impacting metrics like Latency, Number of HTTP status error codes like 5xx. 
 
-1. **Offloading round-trip Latency:** monitors how long each request-response cycle is. It is measured in **Percentiles**. For example, we can say 50th percentile of all the requests have a response time less than x milliseconds, 95th is less than x+eps milliseconds and 99th is less than x+y+eps milliseconds. As there is no right number for laency, this would depend on the expected backend application run time. In any case, latency values should reasonably fall within typical SLA values. **Long response times indicates failures.** 
+1. **Offloading round-trip Latency:** monitors how long each request-response cycle is.
+
+It is measured in **Percentiles**.
+
+*For example*, we can say **50th percentile** of all the requests have a response time less than x milliseconds, **95th Percentile** is less than x+eps milliseconds and **99th percentile** is less than x+y+eps milliseconds. 
+
+As there is no right number for laency, this would depend on the expected backend application run time. In any case, latency values should reasonably fall within typical SLA values. **Long response times indicates failures.** 
 
 Latency values could also vary depending on the size of the negotiated requests, caching for abbreviated SSL handshakes, cipher suite selection e.g RSA based cipher vs ECC based cipher, size of the certificate chain etc.
 
