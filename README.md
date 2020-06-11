@@ -48,7 +48,7 @@ this?
 ![Image](https://github.com/JayNoblez/Test_Task_Adjust/blob/master/Adjust.png)
 
 ### Solution 
-The SSL offloading process takes off the burden of having to run expensive computation like decryption and encryption on backend systems.
+The SSL offloading process takes the burden of having to run expensive computation like decryption and encryption off of backend systems.
 
 All traffic requests are channelled through the SSL offloading server, it is therefore important to monitor metrics relating to the health of this server. To protect availability when trying to reach the backend webservers/ applications.
 
@@ -56,7 +56,7 @@ Relevant metrics to monitor at the SSL Offloading Server can include some usabil
 
 1. **Offloading round-trip Latency:** monitors how long each request-response cycle is. It is measured in **Percentiles**. For example, we can say 50th percentile of all the requests have a response time less than x milliseconds, 95th is less than x+eps milliseconds and 99th is less than x+y+eps milliseconds. As there is no right number for laency, this would depend on the expected backend application run time. In any case, latency values should reasonably fall within typical SLA values. **Long response times indicates failures.** 
 
-This would vary also depending on the size of the negotiated requests, Caching for abbreviated SSL handshakes, Cipher suite type e.g RSA based cipher vs ECC based cipher, size of the certificate chain etc.
+Latency values could also vary depending on the size of the negotiated requests, caching for abbreviated SSL handshakes, cipher suite selection e.g RSA based cipher vs ECC based cipher, size of the certificate chain etc.
 
 2. **The ratio of successful connections vs total connection requests**. 
 Or Error/total requests. This metrics indicates how well the SSL offloading server is servicing incoming request.Connection drops might be a good indicator of servers maxxing at overcapacity or a Denial of Service attack when failed handshaking requests within a short period are astronomically larger than the baseline.
