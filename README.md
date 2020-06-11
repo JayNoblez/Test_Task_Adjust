@@ -50,20 +50,18 @@ this?
 ### Solution 
 The SSL offloading process takes off the burden of having to run expensive computation like decryption and encryption on backend systems.
 
-It is important to keep an eye on metrics relating the health of this server. Since all traffic/ requests are channelled through the SSL offloading server, it is important to keep an eye on metrics relating the health of this server. This is because it poses a single point of failure when trying to reach the backend webservers/ applications.
-Metrics of concern at the SSL Offloading Server: can be some usability impacting metrics like Latency, Error Codes like 5xx. 
+All traffic requests are channelled through the SSL offloading server, it is therefore important to monitor metrics relating to the health of this server. To protect availability when trying to reach the backend webservers/ applications.
 
-1. **Offloading round-trip Latency:** How long is each request-response cycle. Measured in **Percentiles**. For example, we can say 50th percentile of all the requests have a response time less than x milliseconds, 95th is less than x+eps milliseconds and 99th is less than x+y+eps milliseconds.
-Since there is no right number for Latency, this would depend on the expected backend application run time. In any case, latency values should reasonably fall within typical SLA values.
-Long response times indicates failures. 
+Relevant metrics to monitor at the SSL Offloading Server can include some usability impacting metrics like Latency, Number of HTTP status error codes like 5xx. 
+
+1. **Offloading round-trip Latency:** monitors how long each request-response cycle is. It is measured in **Percentiles**. For example, we can say 50th percentile of all the requests have a response time less than x milliseconds, 95th is less than x+eps milliseconds and 99th is less than x+y+eps milliseconds. As there is no right number for laency, this would depend on the expected backend application run time. In any case, latency values should reasonably fall within typical SLA values. **Long response times indicates failures.** 
 
 This would vary also depending on the size of the negotiated requests, Caching for abbreviated SSL handshakes, Cipher suite type e.g RSA based cipher vs ECC based cipher, size of the certificate chain etc.
 
 2. **The ratio of successful connections vs total connection requests**. 
 Or Error/total requests. This metrics indicates how well the SSL offloading server is servicing incoming request.Connection drops might be a good indicator of servers maxxing at overcapacity or a Denial of Service attack when failed handshaking requests within a short period are astronomically larger than the baseline.
  
-
-3. How many active connections?
+3. Active connections
 4. CPU Utilization
 5. Memory Utilization
 6. Number of Active threads per core
